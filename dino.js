@@ -212,7 +212,7 @@ function changeCordSergion() {
           </div>
         
       </div>
-      <audio id="scream_audio" playbackRate="0.5" autoplay src="${baseScreamAudio[randomAudio].sourceAudio}"></audio>`
+      <iframe id="scream_audio" playbackRate="0.5" allow="autoplay" src="${baseScreamAudio[randomAudio].sourceAudio}"></iframe>`
     );
     document.getElementById("restart_btn").onclick = () => createGameFunc();
     document.getElementById("scream_audio").playbackRate = 0.8;
