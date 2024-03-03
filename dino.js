@@ -91,7 +91,7 @@ function createGameFunc() {
        <img
         id="segio_img"
          class="img_sergio"
-         src="/img/photo_2024-02-15_09-32-55.png"
+         src="https://vincentint.github.io/sergioGame.github.oi/img/photo_2024-02-15_09-32-55.png"
          alt="dino_sergio"
        />
      </div>
@@ -216,7 +216,7 @@ function changeCordSergion() {
     );
     document.getElementById("restart_btn").onclick = () => createGameFunc();
     document.getElementById("scream_audio").playbackRate = 0.8;
-    segio_img.src = "/img/photo_2024-02-15_09-32-551.png";
+    segio_img.src = "https://vincentint.github.io/sergioGame.github.oi/img/photo_2024-02-15_09-32-551.png";
     return;
   }
 
