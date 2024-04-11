@@ -5,6 +5,9 @@ body {
   color: white;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
+iframe {
+  display: none;
+}
 .section_counter {
   display: flex;
   justify-content: center;

@@ -1,46 +1,52 @@
 const baseImgDildo = [
-  { id: 1, sourceImg: "https://vincentint.github.io/sergioGame.github.oi/img/free-icon-dildo-4380201.png" },
-  { id: 2, sourceImg: "https://vincentint.github.io/sergioGame.github.oi/img/free-icon-dildo-4380217.png" },
-  { id: 3, sourceImg: "https://vincentint.github.io/sergioGame.github.oi/img/free-icon-dildo-4380212.png" },
-  { id: 4, sourceImg: "https://vincentint.github.io/sergioGame.github.oi/img/free-icon-dildo-4850907.png" },
+  {
+    id: 1,
+    sourceImg:
+      "https://vincentint.github.io/sergioGame.github.oi/img/free-icon-dildo-4380201.png",
+  },
+  {
+    id: 2,
+    sourceImg:
+      "https://vincentint.github.io/sergioGame.github.oi/img/free-icon-dildo-4380217.png",
+  },
+  {
+    id: 3,
+    sourceImg:
+      "https://vincentint.github.io/sergioGame.github.oi/img/free-icon-dildo-4380212.png",
+  },
+  {
+    id: 4,
+    sourceImg:
+      "https://vincentint.github.io/sergioGame.github.oi/img/free-icon-dildo-4850907.png",
+  },
 ];
 const baseScreamAudio = [
-  { id: 1, sourceAudio: "https://vincentint.github.io/sergioGame.github.oi/audio/aaaaaaaa-online-audio-converter_r9waVUO.mp3" },
-  { id: 2, sourceAudio: "https://vincentint.github.io/sergioGame.github.oi/audio/final_5f9a045a61906f00f5e2f4ba_740815.mp3" },
-  { id: 3, sourceAudio: "https://vincentint.github.io/sergioGame.github.oi/audio/bird-scream-power-up-meme.mp3" },
-  { id: 4, sourceAudio: "https://vincentint.github.io/sergioGame.github.oi/audio/fnaf-vhs-screams-meme.mp3" },
-  { id: 5, sourceAudio: "https://vincentint.github.io/sergioGame.github.oi/audio/z1lt8-un781.mp3" },
-];
-const baseAudio = [
   {
     id: 1,
     sourceAudio:
-      "https://vincentint.github.io/sergioGame.github.oi/audio/Y2mate.mx - Kizaru Big Baby Tape- Расскажи как нашёл ведро кончи (переделка трека зеркало ) (320 kbps).mp3",
+      "https://vincentint.github.io/sergioGame.github.oi/audio/aaaaaaaa-online-audio-converter_r9waVUO.mp3",
   },
   {
     id: 2,
     sourceAudio:
-      "https://vincentint.github.io/sergioGame.github.oi/audio/Y2mate.mx - Brazilian phonk _ Gay remix (320 kbps).mp3",
+      "https://vincentint.github.io/sergioGame.github.oi/audio/final_5f9a045a61906f00f5e2f4ba_740815.mp3",
   },
   {
     id: 3,
     sourceAudio:
-      "https://vincentint.github.io/sergioGame.github.oi/audio/Y2mate.mx - Зима в сердце - Вовчик (gay remix) (320 kbps).mp3",
+      "https://vincentint.github.io/sergioGame.github.oi/audio/bird-scream-power-up-meme.mp3",
   },
   {
     id: 4,
     sourceAudio:
-      "https://vincentint.github.io/sergioGame.github.oi/audio/Y2mate.mx - MACAN-ASPHALT 8 & Gay Remix (320 kbps).mp3",
+      "https://vincentint.github.io/sergioGame.github.oi/audio/fnaf-vhs-screams-meme.mp3",
   },
   {
     id: 5,
     sourceAudio:
-      "https://vincentint.github.io/sergioGame.github.oi/audio/Y2mate.mx - BUSHIDO ZHO - когда я был натуралом (slowed+reverb) (320 kbps).mp3",
+      "https://vincentint.github.io/sergioGame.github.oi/audio/z1lt8-un781.mp3",
   },
 ];
-const musicGame = document.getElementById("music_play");
-musicGame.volume = 0.5;
-musicGame.onended = () => backGroundMusic();
 
 let sergio;
 let dildo;
@@ -59,7 +65,6 @@ let statusFail = false;
 
 function createGameFunc() {
   const sectionGame = document.getElementById("section_sergio_game");
-  musicGame.volume = 0.5;
   sectionGame.innerHTML = "";
   statusFail = false;
   counter = 0;
@@ -194,7 +199,6 @@ function changeCordSergion() {
     statusFail = true;
 
     const randomAudio = Math.floor(Math.random() * (5 - 0) + 0);
-    musicGame.volume = 0;
     sergio.style = "animation-play-state: paused";
     dildo.style = `animation:${dildo.style.animation}; animation-play-state: paused`;
 
@@ -216,14 +220,10 @@ function changeCordSergion() {
     );
     document.getElementById("restart_btn").onclick = () => createGameFunc();
     document.getElementById("scream_audio").playbackRate = 0.8;
-    segio_img.src = "https://vincentint.github.io/sergioGame.github.oi/img/photo_2024-02-15_09-32-551.png";
+    segio_img.src =
+      "https://vincentint.github.io/sergioGame.github.oi/img/photo_2024-02-15_09-32-551.png";
     return;
   }
 
   requestAnimationFrame(changeCordSergion);
-}
-function backGroundMusic() {
-  const randomMusic =
-    baseAudio[Math.floor(Math.random() * (5 - 0) + 0)].sourceAudio;
-  musicGame.src = randomMusic;
 }
